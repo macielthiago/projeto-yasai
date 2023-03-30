@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #9604f7;
+    --secondary: #209e10;
+    --text-color: #fff;
+    --text-color: #000;
+    --text-tertiary: #612661;
+    --fonte-destaque: 'Delicious Handrawn', cursive;
+    --fonte-titulo: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*Cabecalho e menu*/
+
+header {
+    width: 100%;
+    height: 20vh;
+    background-color: #612661;
+}
+
+header img {
+    width: 150px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.menu-content {
+    text-transform: uppercase; /*tranforma todas as letras em maiúsculas*/
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    transition: 2ms ease-in;
+    position: relative;
+}
+
+.menu > li > a:before {
+    position: absolute;
+    content:'';
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+    transition: all 1.5s ease;
+}
+
+.menu > li > a:hover:before {
+    width: 100%;
+}
+
+
+/*Primeira seção*/
+
+
+
+#apresentacao {
+    display: flex;
+    background: url(../imagens/menu-grande.png);
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#chamada {
+    background-position: left top;
+    background-size: 20em;
+}
+
+#chamada h1 {
+    font-family: var(--fonte-destaque);
+    text-transform: uppercase;
+    font-size: 6em;
+    font-weight: 700;
+    color: white;
+    margin-left: 1em;
+    padding: 10px;
+    width: 450px;
+}
+
+span {
+    color: yellow;
+}
+
+#logo img{
+    width: 550px;
+}
+
+
+/*Segunda seção*/
+
+
+#subt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subt h2{
+    font-size: 5em;
+    font-family: var(--fonte-destaque);
+    font-weight: 500;
+    color: #209e10;
+}
+
+
+/*Terceira seção*/
+
+
+#produtos {
+    display: flex;
+    background: url(../imagens/produtos.png);
+    background-size: cover;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+#produtos h3 {
+    font-family: var(--fonte-destaque);
+    color: white;
+    font-weight: 200;
+    margin-top: 3.5em;
+    margin-left: 1.3em;
+    font-size: 3em;
+}
+
+#bloco {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.img {
+    width: 400px;
+    height: 400px;
+
+}
+#crm {
+    background: url(../imagens/cm-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+#plp{
+    background: url(../imagens/cm-3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+
+/*Quarta secão - formulário*/
+
+
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.459);
+    margin-left: 7em;
+    margin-bottom: 13em;
+}
+
+#title-form {
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #612661;
+
+}
+
+#form p {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    margin: 1em;
+    line-height: 1.2em;
+}
+
+
+/*imagem*/
+
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #612661;
+    padding: 1em;
+}
+.form-image img {
+    width: 30em;
+}
+
+/*Formulário*/
+
+.form {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+
+/*inputs*/
+
+
+input {
+    width: 100%;
+}
+
+.input-box {
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.input-box input {
+    margin: 0.5em 0;
+    padding: 0.5em 1.2em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #6126617e;
+}
+
+
+.continue-button button {
+    width: 100%;
+    margin-top: 1.5em;
+    border: none;
+    background-color: rgb(23, 23, 248);
+    padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.continue-button button:hover {
+    background-color: rgb(158, 92, 245);
+}
+.continue-button button a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+
+/*Rodapé*/
+
+footer {
+    background-image: url(../imagens/menu-grande-3.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    justify-content: space-around;
+    padding: 5em;
+}
+
+#final {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.end {
+    display:inline-block;
+    margin-top: 5em;
+    margin-bottom: 0;
+    margin-left: 6em;
+}
